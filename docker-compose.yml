@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  sh: &default
+    image: temp
+    build: .
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - ./app:/app
+
+  test:
+    <<: *default
+    command: ./entrypoint

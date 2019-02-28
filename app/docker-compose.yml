@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  redis:
+    image: redis
+
+  ping:
+    image: temp/ping
+    build: .
+    command: redis-cli -h redis ping
+    links: [redis]
