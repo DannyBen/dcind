@@ -6,6 +6,4 @@ COPY app .
 
 RUN chmod +x entrypoint
 
-VOLUME ["/var/run/docker.sock"]
-
 ENTRYPOINT []
