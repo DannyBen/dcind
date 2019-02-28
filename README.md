@@ -7,15 +7,22 @@ within a docker container to launch sibling containers.
 Usage
 --------------------------------------------------
 
-1. Build
+### 1. Build
+  
+```
+$ docker-compose build
+```
 
-    $ docker-compose build
+### 2. Run
 
-2. Start a container that has docker-compose installed in it, which will run 
-a second docker-compose file, which uses two containers: a redis server, and 
-a second container that will ping that redis server.
+Start a container that has docker-compose installed in it, which will run 
+a [second docker-compose file](app/docker-compose.yml), which uses two 
+containers: a redis server, and a second container that will ping that 
+redis server.
 
-    $ docker-compose run test
-    # ...
-    # PONG
+```
+$ docker-compose run test
+# ...
+# PONG
+```
 
