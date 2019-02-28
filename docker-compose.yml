@@ -6,8 +6,8 @@ services:
     build: .
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock
-    - ./app:/app
+    # - ./app:/app
 
   test:
     <<: *default
-    command: ./entrypoint
+    command: /app/entrypoint
