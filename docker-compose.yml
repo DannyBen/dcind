@@ -4,9 +4,11 @@ services:
   sh: &default
     image: temp
     build: .
+    container_name: dannyben/dcind
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock
     # - ./app:/app
+    command: sh
 
   test:
     <<: *default
